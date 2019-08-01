@@ -2,11 +2,9 @@
     box-sizing: border-box;
 }
 
-
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     margin: 0;
-    padding: 0;
 }
 
 .backdrop {
@@ -22,16 +20,18 @@ body {
 
 .main-header {
     width: 100%;
-    background: #2ddf5c;
-    padding: 0.5rem 1rem;
     position: fixed;
     top: 0;
     left: 0;
+    background: #2ddf5c;
+    padding: 0.5rem 1rem;
     z-index: 1;
+
 }
 
 .main-header > div {
     display: inline-block;
+    vertical-align: middle;
 }
 
 .toggle-button {
@@ -42,7 +42,6 @@ body {
     padding-top: 0;
     padding-bottom: 0;
     vertical-align: middle;
-    height: 1.7rem;
 }
 
 .toggle-button:focus {
@@ -54,22 +53,23 @@ body {
     height: 0.2rem;
     background: black;
     display: block;
-    margin: 0.3rem 0;
+    margin: 0.6rem 0;
 }
-
 
 .main-header__brand {
     color: #0e4f1f;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.5rem;
-    vertical-align: middle;
     height: 1.5rem;
+    /* width: 20px; */
     display: inline-block;
+    vertical-align: middle;
 }
 
-.main-header__brand > img {
+.main-header__brand img {
     height: 100%;
+    /* width: 100%; */
 }
 
 .main-nav {
@@ -91,20 +91,12 @@ body {
 }
 
 .main-nav__item a,
-.mobile-nav__item a{
+.mobile-nav__item a {
     text-decoration: none;
     color: #0e4f1f;
     font-weight: bold;
-    padding: 0.18rem;
+    padding: 0.2rem 0;
 }
-
-/*
-.main-nav__item a::after {
-    content: ' ♥';
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.57);
-    color: #ff6271;
-}
-*/
 
 .main-nav__item a:hover,
 .main-nav__item a:active {
@@ -113,23 +105,17 @@ body {
 }
 
 .main-nav__item--cta a,
-.mobile-nav__item--cta a{
+.mobile-nav__item--cta a {
     color: white;
     background: #ff1b68;
     padding: 0.5rem 1rem;
     border-radius: 8px;
 }
 
-.main-nav__item--cta a::after {
-    content: ' ♥';
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.57);
-    color: #ff8993;
-}
-
 .main-nav__item--cta a:hover,
 .main-nav__item--cta a:active,
 .mobile-nav__item--cta a:hover,
-.mobile-nav__item--cta a:active{
+.mobile-nav__item--cta a:active {
     color: #ff1b68;
     background: white;
     border: none;
@@ -154,8 +140,13 @@ body {
 }
 
 .main-footer__link a {
-    text-decoration: none;
     color: white;
+    text-decoration: none;
+}
+
+.main-footer__link a:hover,
+.main-footer__link a:active {
+    color: #ccc;
 }
 
 .mobile-nav {
@@ -187,20 +178,19 @@ body {
 }
 
 .button {
-    background-color: #0e4f1f;
+    background: #0e4f1f;
     color: white;
-    font-family: inherit;
+    font: inherit;
     border: 1.5px solid #0e4f1f;
     padding: 0.5rem;
     border-radius: 8px;
-    cursor: pointer;
-    font-size: large;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .button:hover,
 .button:active {
-    background-color: white;
+    background: white;
     color: #0e4f1f;
 }
 
