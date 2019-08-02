@@ -52,6 +52,10 @@ main {
     padding: 1rem;
     border: 1px solid #0e4f1f;
     background: white;
+    font-size: 1.2rem;
+    color: #0e4f1f;
+    font-weight: 700;
+    line-height: 1;
 }
 
 .clearfix {
