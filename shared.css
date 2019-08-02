@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Anton|Montserrat:400,700|Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,900');
+@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
 * {
     box-sizing: border-box;
 }
 
-
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     margin: 0;
-    padding: 0;
 }
 
 main {
-    min-height: calc(100vh - 2.7rem - 8rem);
-    margin-top: 2.7rem;
+    min-height: calc(100vh - 3.5rem - 8rem);
+    margin-top: 3.5rem;
 }
 
 .backdrop {
@@ -29,16 +29,17 @@ main {
 
 .main-header {
     width: 100%;
-    background: #2ddf5c;
-    padding: 0.5rem 1rem;
     position: fixed;
     top: 0;
     left: 0;
+    background: #2ddf5c;
+    padding: 0.5rem 1rem;
     z-index: 1;
 }
 
 .main-header > div {
     display: inline-block;
+    vertical-align: middle;
 }
 
 .toggle-button {
@@ -49,7 +50,6 @@ main {
     padding-top: 0;
     padding-bottom: 0;
     vertical-align: middle;
-    height: 1.7rem;
 }
 
 .toggle-button:focus {
@@ -61,28 +61,26 @@ main {
     height: 0.2rem;
     background: black;
     display: block;
-    margin: 0.3rem 0;
+    margin: 0.6rem 0;
 }
-
 
 .main-header__brand {
     color: #0e4f1f;
     text-decoration: none;
     font-weight: bold;
-    vertical-align: middle;
     height: 2.5rem;
+    /* width: 20px; */
     display: inline-block;
+    vertical-align: middle;
 }
 
-.main-header__brand > img {
+.main-header__brand img {
     height: 100%;
+    /* width: 100%; */
 }
 
 .main-nav {
-    display: inline-block;
-    text-align: right;
-    width: calc(100% - 122px);
-    vertical-align: middle;
+    display: none;
 }
 
 .main-nav__items {
@@ -97,20 +95,12 @@ main {
 }
 
 .main-nav__item a,
-.mobile-nav__item a{
+.mobile-nav__item a {
     text-decoration: none;
     color: #0e4f1f;
     font-weight: bold;
-    padding: 0.18rem;
+    padding: 0.2rem 0;
 }
-
-/*
-.main-nav__item a::after {
-    content: ' ♥';
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.57);
-    color: #ff6271;
-}
-*/
 
 .main-nav__item a:hover,
 .main-nav__item a:active {
@@ -119,26 +109,33 @@ main {
 }
 
 .main-nav__item--cta a,
-.mobile-nav__item--cta a{
+.mobile-nav__item--cta a {
     color: white;
     background: #ff1b68;
     padding: 0.5rem 1rem;
     border-radius: 8px;
 }
 
-.main-nav__item--cta a::after {
-    content: ' ♥';
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.57);
-    color: #ff8993;
-}
-
 .main-nav__item--cta a:hover,
 .main-nav__item--cta a:active,
 .mobile-nav__item--cta a:hover,
-.mobile-nav__item--cta a:active{
+.mobile-nav__item--cta a:active {
     color: #ff1b68;
     background: white;
     border: none;
+}
+
+@media (min-width: 40rem) {
+    .toggle-button {
+        display: none;
+    }
+
+    .main-nav {
+        display: inline-block;
+        text-align: right;
+        width: calc(100% - 44px);
+        vertical-align: middle;
+    }
 }
 
 .main-footer {
@@ -155,13 +152,18 @@ main {
 }
 
 .main-footer__link {
-    display: inline-block;
-    margin: 0 1rem;
+    display: block;
+    margin: 1rem 0;
 }
 
 .main-footer__link a {
-    text-decoration: none;
     color: white;
+    text-decoration: none;
+}
+
+.main-footer__link a:hover,
+.main-footer__link a:active {
+    color: #ccc;
 }
 
 .mobile-nav {
@@ -193,20 +195,19 @@ main {
 }
 
 .button {
-    background-color: #0e4f1f;
+    background: #0e4f1f;
     color: white;
-    font-family: inherit;
+    font: inherit;
     border: 1.5px solid #0e4f1f;
     padding: 0.5rem;
     border-radius: 8px;
-    cursor: pointer;
-    font-size: large;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .button:hover,
 .button:active {
-    background-color: white;
+    background: white;
     color: #0e4f1f;
 }
 
@@ -223,4 +224,11 @@ main {
 
 .open {
     display: block !important;
+}
+
+@media (min-width: 40rem) {
+    .main-footer__link {
+        display: inline-block;
+        margin: 0 1rem;
+    }
 }
